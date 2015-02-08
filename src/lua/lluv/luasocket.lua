@@ -116,7 +116,7 @@ function BaseSock:_stop(op)
 end
 
 function BaseSock:_on_io_error(err)
-  if err then err = "closed" end
+  if not err then err = "closed" end
 
   self._err = err
 
